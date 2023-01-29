@@ -17,11 +17,15 @@ export const isLoadingTrue = () => ({
   type: ISLOADING_TRUE,
 });
 
+const TWO_SECONDS = 2000;
+
 export const fetchData = () => (dispatch) => {
   fetch('https://jsonplaceholder.typicode.com/posts')
     .then((res) => res.json())
     .then((data) => {
-      dispatch(fetchDataSucess(data));
-      dispatch(isLoadingFalse());
+      setTimeout(() => {
+        dispatch(fetchDataSucess(data));
+        dispatch(isLoadingFalse());
+      }, TWO_SECONDS);
     });
 };
