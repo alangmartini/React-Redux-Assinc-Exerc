@@ -98,8 +98,7 @@ Neste exercício você deverá testar se assim que a aplicação começa, há ap
 <details>
   <summary>Testes que deverão ser feitos: </summary>
 
-1. Teste se o fetch ainda não foi chamado;
-2. Teste se existe a mensagem de 'Carregando...' na tela.
+1. Teste se existe a mensagem de 'Carregando...' na tela.
 
 </details>
 
