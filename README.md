@@ -83,10 +83,13 @@ Todos os testes dos exercícios de fixação deverão ser implementados no arqui
 Garanta que você entendeu a implementação da aplicação antes de realizar os testes.
 
 **Dica 1:** Sua primeira ação deve ser construir a função renderWithRedux, mockar o retorno da API e criar um mock do fetch.
-  * Caso faça o mock do fetch num arquivo separado, não esqueça de atribuir ao objeto **global.fetch** o seu mock.
+  * Caso faça o mock do fetch em um arquivo separado, não esqueça de atribuir ao objeto **global.fetch** o seu mock.
 
 **Dica 2:** Parte do requisito consiste em você consegui fazer seu teste esperar o texto "Carregando..." sumir da tela. Pense em como você faria isso!
-  >**Dica bonus**: (você pode usar o `waitForElementToBeRemoved()`);
+  <details>
+    <summary>Dica bonus</summary>
+     Você pode usar o `waitForElementToBeRemoved()`
+  </details>
 
 ## Exercício 1
 
