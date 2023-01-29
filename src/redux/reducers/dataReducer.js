@@ -1,7 +1,7 @@
-import { FETCH_DATA_SUCCESS, TOGGLE_ISLOADING } from '../actions/data';
+import { FETCH_DATA_SUCCESS, ISLOADING_FALSE, ISLOADING_TRUE } from '../actions/data';
 
 const INITIAL_STATE = {
-  data,
+  data: null,
   isLoading: true,
 };
 
@@ -12,10 +12,10 @@ const dataReducer = (state = INITIAL_STATE, action) => {
       ...state,
       data: action.payload,
     };
-  case TOGGLE_ISLOADING:
+  case ISLOADING_FALSE:
     return {
       ...state,
-      isLoading: !state.isLoading,
+      isLoading: false,
     };
   default:
     return state;

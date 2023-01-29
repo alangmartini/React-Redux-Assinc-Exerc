@@ -7,3 +7,59 @@ body {
 .title {
   color: #ffa600;
 }
+
+body {
+  background-color: #0b3d91;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  color: #ffa600;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 50px auto;
+  max-width: 1000px;
+}
+
+.card {
+  background-color: #1c2331;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  color: white;
+  height: 300px;
+  width: 300px;
+  margin: 30px;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 20px;
+}
+
+.card-btn {
+  background-color: #ffa600;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 30px;
+  padding: 10px 20px;
+}
+
+.card-btn:hover {
+  background-color: #ff8b00;
+}

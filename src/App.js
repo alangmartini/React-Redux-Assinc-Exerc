@@ -6,18 +6,23 @@ import { fetchData } from './redux/actions/data';
 
 class App extends React.Component {
   componentDidMount() {
+    const { dispatch } = this.props;
     dispatch(fetchData());
   }
 
   render() {
     const { data, isLoading } = this.props;
-
+    console.log(data)
+    console.log(isLoading)
     if (isLoading) return <p> Carregando... </p>;
 
     return (
-      <div>
-        {data.map((item) => (
-          <div key={ item.id }>{item.title}</div>
+      <div className="container">
+        {data.map(item => (
+          <div className="card" key={item.id}>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
         ))}
       </div>
     );
