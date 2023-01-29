@@ -16,8 +16,8 @@ class App extends React.Component {
 
     return (
       <div className="container">
-        {data.map(item => (
-          <div className="card" key={item.id}>
+        {data.map((item) => (
+          <div className="card" key={ item.id }>
             <h3>{item.title}</h3>
             <p>{item.body}</p>
           </div>
