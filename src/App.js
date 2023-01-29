@@ -12,8 +12,6 @@ class App extends React.Component {
 
   render() {
     const { data, isLoading } = this.props;
-    console.log(data)
-    console.log(isLoading)
     if (isLoading) return <p> Carregando... </p>;
 
     return (
@@ -21,7 +19,7 @@ class App extends React.Component {
         {data.map(item => (
           <div className="card" key={item.id}>
             <h3>{item.title}</h3>
-            <p>{item.description}</p>
+            <p>{item.body}</p>
           </div>
         ))}
       </div>
@@ -35,7 +33,10 @@ const mapStateToProps = (state) => ({
 });
 
 App.propTypes = {
-  data: PropTypes.array.isRequired,
+  data: PropTypes.arrayOf({
+    body: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  }).isRequired,
   isLoading: PropTypes.bool.isRequired,
   dispatch: PropTypes.func.isRequired,
 };
